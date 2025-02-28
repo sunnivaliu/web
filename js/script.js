@@ -1,12 +1,3 @@
-// Modal Functions
-function openModal() {
-    document.getElementById("infoDialog").showModal();
-}
-
-function closeModal() {
-    document.getElementById("infoDialog").close();
-}
-
 // Fetch and Set Image
 function fetchMyImage() {
     document.getElementById('myImage').src = 'https://cdn.prod.website-files.com/647444f26ccc23bbb500da83/665dddb2ce35736f6d2573c1_IMG_0618%202-p-500.jpg';
@@ -41,3 +32,26 @@ document.addEventListener("DOMContentLoaded", () => {
     fetchMyImage();
     fetchLocation();
 });
+
+$( document ).ready(function(){
+    $(document).mousemove(function(e) {
+        var p = $( ".homeIcon" ).last();
+        var offset = p.offset();
+        var iconWidth = $( ".homeIcon" ).width();
+        var iconHeight = $( ".homeIcon" ).height();
+        centerX = offset.left + iconWidth/2 - window.pageXOffset,
+        centerY = offset.top + iconHeight/2 - window.pageYOffset;
+        var radians = Math.atan2(e.pageX - centerX, e.pageY - centerY);
+        var degree = 180+((radians * (180 / Math.PI) * -1) + 180); 
+        $('.homeIcon').css('transform', 'rotate(' + degree + 'deg)');
+      });
+})
+
+// // Modal Functions
+// function openModal() {
+//     document.getElementById("infoDialog").showModal();
+// }
+
+// function closeModal() {
+//     document.getElementById("infoDialog").close();
+// }
