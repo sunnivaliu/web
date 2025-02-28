@@ -1,0 +1,71 @@
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js"></script>
+    <!-- meta property -->
+    <meta property="og:title" content="Sunniva's Homepage">
+    <meta property="og:description" content="Welcome to my personal homepage!">
+    <meta property="og:image" content="https://your-site.com/img/MyEmoji.png">
+    <meta property="og:url" content="https://your-github-username.github.io/cs5356-hw3/">
+    <meta property="og:type" content="website">
+
+</head>
+
+
+<body class = "home">
+    <div class="cursor"></div>
+
+    <header>
+        <h2>MADEINCHINA</h2>
+    </header>
+
+    <br><br>
+
+    <section>
+        <img src="../img/MyEmoji.png" alt="My Picture" width="200" class="shake">
+        <div>
+            <p>Hi! I'm <strong>Sunniva</strong>. Welcome to my playground.</p>  
+        </div>
+
+    </section>
+
+    <details class="details-box">
+        <summary>Learn more about me</summary>
+        <p>I am a Computer Science graduate student at Cornell Tech, Cornell University, 
+            and a recent graduate from Carnegie Mellon University. Click my picture to access my professional website.</p>
+        <img id="myImage" src="" alt="My Image" onclick=goToWebsite()>
+    </details>  
+    
+    
+    <br><br><br><br>
+
+    <section>
+        <div class="location-container">
+            <p><strong>WHERE ARE YOU</strong></p>
+            <p id="myLocation">Loading...</p>
+        </div>
+        <div class="main-button">
+            <button onclick="fetchLocation()">Refresh</button>
+        </div>
+    </section>
+
+    <!-- 
+    <section>
+        <h2>My Video</h2>
+        <video width="600" controls>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>     -->
+
+        <!-- <button onclick="openModal()">Open Modal</button>
+    <dialog id="infoDialog">
+        <p>This is a modal dialog! Click anywhere outside or press ESC to close.</p>
+        <button onclick="closeModal()">Close</button>
+    </dialog>     -->
+
+    <footer>
+        <p>© 2025 Sunniva Liu</p>
+    </footer>
+
+</body>
+
